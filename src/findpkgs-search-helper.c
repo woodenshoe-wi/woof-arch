@@ -94,7 +94,7 @@ char is_verbose;
 char is_debug;
 
 
-
+static
 int read_one_file(char *filename, struct single_list_item_struct **current_list_item)
 {
 	int i;
@@ -482,6 +482,7 @@ int write_final_pkgs_file()
  * comp_alias does not implement regular expressions.
  * A "*" character in 'name' is not expected.
  */
+static
 int comp_alias(char *alias, char *name)
 {
 	size_t compare_length = 0;
